@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "MileageResult";
+}
+
+@model Tripometer
+
+<h2>Range: @Model.Ranged()</h2>
+<h2>Trip Distance: @Model.Trip</h2>
+
+@if (Model.Ranged() < Model.Trip)
+{
+    <h2 style="color: red;">You don't have enough gas to make the trip!</h2>
+}
+else
+{
+    <h2 style="color: chartreuse;">You have enough gas to make the trip!</h2>
+}
+
+
